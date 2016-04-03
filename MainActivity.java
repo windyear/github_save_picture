@@ -1,4 +1,4 @@
-//½øĞĞÁË²âÊÔĞŞ¸Ä
+
 package com.example.listviewdemo;
 
 import java.util.ArrayList;
@@ -28,7 +28,7 @@ public class MainActivity extends ActionBarActivity implements android.widget.Ab
         super.onCreate(savedInstanceState);
         setContentView(R.layout.lview);
         listview=(ListView)findViewById(R.id.listView1);
-        String[] arr_data={"¿Æ±È","Õ²Ä·Ë¹","¶ÅÀ¼ÌØ"};
+        String[] arr_data={"ç§‘æ¯”","è©¹å§†æ–¯","æœå…°ç‰¹"};
         dataList=new ArrayList<Map<String,Object>>();
         arr_adp=new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, arr_data);
         //listview.setAdapter(arr_adp);
@@ -41,7 +41,7 @@ public class MainActivity extends ActionBarActivity implements android.widget.Ab
     	for(int i=0;i<=20;i++){
     		Map<String, Object>map=new HashMap<String, Object>();
     		map.put("pic", R.drawable.ic_launcher);
-    		map.put("text", "ÇòĞÇ"+i+"ºÅ");
+    		map.put("text", "çƒæ˜Ÿ"+i+"å·");
     		dataList.add(map);
     	}
     	return dataList;
@@ -61,7 +61,7 @@ public class MainActivity extends ActionBarActivity implements android.widget.Ab
 		case SCROLL_STATE_FLING:
 			Map<String, Object>map=new HashMap<String, Object>();
 			map.put("pic",R.drawable.ic_launcher);
-			map.put("text", "Ôö¼ÓÏî");
+			map.put("text", "å¢åŠ é¡¹");
 			dataList.add(map);
 			sim_adp.notifyDataSetChanged();
 			break;
